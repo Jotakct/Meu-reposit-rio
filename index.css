@@ -1,3 +1,4 @@
+
 .pagina-home{
     text-align: center;
     display: flex;
@@ -38,6 +39,15 @@ footer ul li a{
 .formes{
     padding: 20px;
 }
-.card{
+.card-group{
     display:flex;
+}
+.contatis{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(212, 184, 189, .6);
+   
 }
