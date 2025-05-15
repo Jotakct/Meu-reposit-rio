@@ -1,0 +1,31 @@
+body{
+background-color: rgb(240, 193, 41);
+}
+.home{
+    border-radius: 50px;
+    border-width: 10px;
+    border-color: rgb(6, 6, 97);
+    border-style: solid;
+    align-items: center;
+    justify-content: center;
+}
+.item{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 60px;
+}
+.imagem{
+    border-radius: 100%;
+    border-width: thick;
+    border-color: rgb(6, 6, 97);
+    border-style: solid;
+    align-items: center;
+    justify-content: left;
+    padding: 20px;
+}
+.texto{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 20px;
+    color: rgb(6, 6, 97);
+}
