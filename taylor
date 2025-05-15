@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Avisos</title>
+</head>
+<body>
+    <div class="home">
+      <div class="item">
+        <div class="imagem">
+            <img src="imagens/bathroom-restroom-svgrepo-com.svg" alt="genero" width="200" height="200">
+        </div>
+        <div class="texto">
+            <h3>LOVER</h3>
+            <p>
+               Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+               Culpa illo ipsa autem magni alias cum, quasi 
+               corrupti aperiam et, nulla quidem corporis quos amet 
+               nesciunt libero, consequuntur est! Cum, sint? 
+            </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="imagem">
+            <img src="imagens/bathroom-cleaning-housekeeping-toilet-svgrepo-com.svg" alt="toilet" width="200" height="200">
+        </div>
+        <div class="texto">
+            <h3>
+                1989
+            </h3>
+            <P>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse consectetur sed placeat temporibus pariatur. R 
+                em similique dignissimos minus corporis ex vero voluptate, quo
+                d aut saepe aspernatur possimus, provident, quo soluta.
+            </P>
+        </div>
+      </div>
+      <div class="item">
+        <div class="imagem">
+            <img src="imagens/toilet-paper-5-svgrepo-com.svg" alt="papel" width="200" height="200">
+        </div>
+        <div class="texto">
+            <h3>RED</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate esse vero 
+                dignissimos similique sed, voluptatum qui nemo nobis la
+                borum corporis ducimus? Culpa quasi provident illum nulla 
+                fficia sed iste aspernatur.</p>
+        </div>
+
+      </div>
+      <div class="item">
+        <div class="imagem">
+            <img src="imagens/toilet-svgrepo-com.svg" alt="mictorio" width="200" height="200">
+        </div>
+        <div class="texto">
+            <h3>SPEAK NOW</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod distinctio non asperiores
+                 quae? Commodi cumque omnis unde eligendi qui amet sint debitis! Ma
+                 xime illum laborum assumenda, esse sed tenetur numquam.</p>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
