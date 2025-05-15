@@ -1,0 +1,14 @@
+const prompt = require('prompt-sync')();
+let baseDoTriangulo = parseInt(prompt('Digite a base do triangulo: '));
+
+for (let i = 0; i < baseDoTriangulo; i++){
+    console.log('');
+    for(let j = 0; j < baseDoTriangulo; j++){
+        if(i + j >= baseDoTriangulo - 1){
+            process.stdout.write('*');
+        }
+        else{
+            process.stdout.write(' ');
+        }
+    }
+}
