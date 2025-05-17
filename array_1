@@ -1,0 +1,21 @@
+/* Leia 8 números inteiros dou suário
+ e armazene-os em uma coleção indexada(array).Depois, calcula à média desses valores .Ao final,
+ exiba todos os números do array maiores que à média calculada.
+  */
+
+let numeros = [9,4,3,7,10,6,8,5];
+let soma = 0;
+let maiores = [];
+
+for(let i = 0; i < numeros.length; i++){
+     soma = soma + numeros[i]; 
+}
+let media = soma / numeros.length;
+
+for(let i = 0; i < numeros.length; i++){
+    if(numeros[i] > media){
+        maiores.push(numeros[i]);
+        
+    }
+}
+console.log(maiores);
