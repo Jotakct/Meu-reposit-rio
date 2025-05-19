@@ -1,0 +1,95 @@
+-- Tabela de Clientes
+CREATE TABLE TB_clientes (
+    id_cliente VARCHAR PRIMARY KEY,
+    endereco TEXT NOT NULL,
+    telefone TEXT NOT NULL,
+    nome_responsavel VARCHAR NOT NULL,
+    ramo_atividade TEXT NOT NULL,
+    razao_social TEXT NOT NULL,
+    CNPJ TEXT NOT NULL,
+    nome_fantasia TEXT NOT NULL
+);
+
+-- Tabela de Pedidos
+CREATE TABLE TB_pedidos (
+    id_pedido VARCHAR PRIMARY KEY,
+    data_pedido DATE NOT NULL,
+    forma_pagamento TEXT NOT NULL,
+    data_entrega_prevista DATE NOT NULL,
+    data_entrega_efetiva DATE NOT NULL,
+    fk_id_cliente VARCHAR NOT NULL,
+    FOREIGN KEY (fk_id_cliente) REFERENCES TB_clientes(id_cliente)
+);
+
+-- Tabela de Produtos
+CREATE TABLE TB_produto (
+    id_produto VARCHAR PRIMARY KEY,
+    nome_produto TEXT NOT NULL,
+    tamanho_produto SMALLINT NOT NULL,
+    cor_produto TEXT NOT NULL,
+    preco_produto NUMERIC(10,2) NOT NULL
+);
+
+-- Tabela de Itens do Pedido
+CREATE TABLE REL_itens (
+    fk_id_pedido VARCHAR NOT NULL,
+    fk_id_produto VARCHAR NOT NULL,
+    PRIMARY KEY (fk_id_pedido, fk_id_produto),
+    FOREIGN KEY (fk_id_pedido) REFERENCES TB_pedidos(id_pedido),
+    FOREIGN KEY (fk_id_produto) REFERENCES TB_produto(id_produto)
+);
+
+-- Tabela de Estoque de Produtos
+CREATE TABLE TB_estoque_produto (
+    fk_id_produto VARCHAR PRIMARY KEY,
+    qt_estoque INTEGER NOT NULL,
+    FOREIGN KEY (fk_id_produto) REFERENCES TB_produto(id_produto)
+);
+
+-- Tabela de Matéria-Prima
+CREATE TABLE TB_Mprima (
+    id_Mprima TEXT PRIMARY KEY,
+    nome_Mprima TEXT NOT NULL,
+    descricao TEXT NOT NULL,
+    qt_estoque INTEGER NOT NULL
+);
+
+-- Tabela de Relação entre Matéria-Prima e Produto
+CREATE TABLE REL_Mprima_produto (
+    fk_id_produto VARCHAR NOT NULL,
+    fk_id_Mprima TEXT NOT NULL,
+    PRIMARY KEY (fk_id_produto, fk_id_Mprima),
+    FOREIGN KEY (fk_id_produto) REFERENCES TB_produto(id_produto),
+    FOREIGN KEY (fk_id_Mprima) REFERENCES TB_Mprima(id_Mprima)
+);
+
+-- Tabela de Produção
+CREATE TABLE TB_producao (
+    id_lote INTEGER NOT NULL,
+    id_produto VARCHAR NOT NULL,
+    qt_produzida INTEGER NOT NULL,
+    custo_lote NUMERIC(10,2) NOT NULL,
+    data_entrega DATE NOT NULL,
+    PRIMARY KEY (id_lote, id_produto),
+    FOREIGN KEY (id_produto) REFERENCES TB_produto(id_produto)
+);
+
+-- Tabela de Fornecedores
+CREATE TABLE TB_fornecedor (
+    id_fornecedor TEXT PRIMARY KEY,
+    endereco VARCHAR NOT NULL,
+    nome_contato VARCHAR NOT NULL,
+    cnpj TEXT NOT NULL,
+    telefone TEXT NOT NULL,
+    razao_social TEXT NOT NULL
+);
+
+-- Tabela de Relação entre Matéria-Prima e Fornecedor
+CREATE TABLE REL_Mprima_fornec (
+    id_Mprima TEXT NOT NULL,
+    id_fornecedor TEXT NOT NULL,
+    PRIMARY KEY (id_Mprima, id_fornecedor),
+    FOREIGN KEY (id_Mprima) REFERENCES TB_Mprima(id_Mprima),
+    FOREIGN KEY (id_fornecedor) REFERENCES TB_fornecedor(id_fornecedor)
+);
+
